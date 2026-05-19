@@ -189,65 +189,102 @@ function showSeaInfo(name, desc, safety){
 
 
 
-// 🔥 دالة تسجيل الدخول والتحقق عبر السيرفر وقاعدة البيانات
-function login() {
-    let email = document.getElementById("email").value;
-    let pass = document.getElementById("pass").value;
-    let remember = document.getElementById("remember").checked;
+// ===================================== */
+// 🔥 دالة تسجيل مستخدم جديد (نسخة المتصفح الذكية بدون سيرفر)
+// ===================================== */
+function registerUser() {
+    let name = document.getElementById("signup-name").value;
+    let email = document.getElementById("signup-email").value;
+    let password = document.getElementById("signup-pass").value;
 
-    // التحقق من الحقول قبل الإرسال
-    if (email === "" || pass === "") {
-        document.getElementById("msg").style.color = "red";
-        document.getElementById("msg").innerHTML = "Please fill all fields! ⚠️";
+    // التحقق من أن الحقول ليست فارغة
+    if (name === "" || email === "" || password === "") {
+        alert("Please fill all fields! ⚠️");
         return;
     }
 
-    // تجهيز البيانات لإرسالها للسيرفر
-    let loginData = {
+    // جلب قائمة المستخدمين المسجلين سابقاً أو إنشاء قائمة جديدة
+    let users = JSON.parse(localStorage.getItem("campgo_users")) || [];
+
+    // التحقق إذا كان الإيميل مسجل من قبل
+    let userExists = users.some(u => u.email === email);
+    if (userExists) {
+        alert("This email is already registered! ❌");
+        return;
+    }
+
+    // إضافة المستخدم الجديد للقائمة
+    let newUser = {
+        full_name: name,
         email: email,
-        password: pass
+        password: password
     };
+    users.push(newUser);
 
-    // إرسال طلب التحقق إلى السيرفر
-    fetch('http://localhost:3000/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(loginData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // إذا تطابقت البيانات بنجاح 🎉
-            document.getElementById("msg").style.color = "green";
-            document.getElementById("msg").innerHTML = data.message;
+    // حفظ القائمة المحدثة في المتصفح
+    localStorage.setItem("campgo_users", JSON.stringify(users));
+    localStorage.setItem("currentUser", JSON.stringify(newUser));
 
-            // حفظ المستخدم في الـ localStorage ليبقى متذكراً لدخوله
-            localStorage.setItem("currentUser", JSON.stringify(data.user));
-            if(remember) {
-                localStorage.setItem("rememberUser", "true");
-            }
-
-            // الانتقال فوراً إلى الصفحة الرئيسية بعد ثانية واحدة للاحتفال
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 1000);
-
-        } else {
-            // إذا كانت البيانات خاطئة ❌
-            document.getElementById("msg").style.color = "red";
-            document.getElementById("msg").innerHTML = data.message;
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById("msg").style.color = "red";
-        document.getElementById("msg").innerHTML = "Could not connect to the server 🔌";
-    });
+    alert("Account Created Successfully! 🎉"); 
+    
+    // الانتقال مباشرة إلى صفحة تسجيل الدخول
+    window.location.href = "login.html"; 
 }
 
+// ===================================== */
+// 🔥 دالة تسجيل الدخول والتحقق (نسخة المتصفح الذكية بدون سيرفر)
+// ===================================== */
+function login() {
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("pass").value;
+    let remember = document.getElementById("remember") ? document.getElementById("remember").checked : false;
+    let msgBox = document.getElementById("msg");
 
+    // التحقق من الحقول قبل الإرسال
+    if (email === "" || pass === "") {
+        if (msgBox) {
+            msgBox.style.color = "red";
+            msgBox.innerHTML = "Please fill all fields! ⚠️";
+        } else {
+            alert("Please fill all fields! ⚠️");
+        }
+        return;
+    }
+
+    // جلب قائمة المستخدمين المخزنة في المتصفح
+    let users = JSON.parse(localStorage.getItem("campgo_users")) || [];
+
+    // البحث عن المستخدم المطابق للإيميل والباسورد
+    let validUser = users.find(u => u.email === email && u.password === pass);
+
+    if (validUser) {
+        // إذا تطابقت البيانات بنجاح 🎉
+        if (msgBox) {
+            msgBox.style.color = "green";
+            msgBox.innerHTML = "Login Successful! Welcome back 🎉";
+        }
+
+        // حفظ المستخدم الحالي ليعرفه الموقع
+        localStorage.setItem("currentUser", JSON.stringify(validUser));
+        if (remember) {
+            localStorage.setItem("rememberUser", "true");
+        }
+
+        // الانتقال فوراً إلى الصفحة الرئيسية بعد ثانية واحدة للاحتفال
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1000);
+
+    } else {
+        // إذا كانت البيانات خاطئة أو الحساب غير موجود ❌
+        if (msgBox) {
+            msgBox.style.color = "red";
+            msgBox.innerHTML = "Invalid email or password! ❌";
+        } else {
+            alert("Invalid email or password! ❌");
+        }
+    }
+}
 
 
 
@@ -376,52 +413,7 @@ function rate(n){
     alert("You rated " + n + " stars ⭐");
 }
 
-// 🔥 دالة تسجيل مستخدم جديد وإرساله لقاعدة البيانات عبر السيرفر
-function registerUser() {
-    let name = document.getElementById("signup-name").value;
-    let email = document.getElementById("signup-email").value;
-    let password = document.getElementById("signup-pass").value;
 
-    // التحقق من أن الحقول ليست فارغة
-    if (name === "" || email === "" || password === "") {
-        alert("Please fill all fields!");
-        return;
-    }
-
-    // تجهيز البيانات لإرسالها
-    let userData = {
-        full_name: name,
-        email: email,
-        password: password
-    };
-
-    // إرسال البيانات إلى السيرفر باستخدام fetch
-    fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message); 
-            
-            // حفظ بيانات المستخدم الحالي في المتصفح
-            localStorage.setItem("currentUser", JSON.stringify(data.user));
-            
-            // الانتقال مباشرة إلى الصفحة الرئيسية للموقع
-            window.location.href = "index.html"; 
-        } else {
-            alert("Error: " + data.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("Could not connect to the server.");
-    });
-}
 // 1️⃣ دالة فتح النافذة المنبثقة للأماكن (تعمل مع كل الجبال، البحار، والأنهار)
 function openPopup(name, wilaya, desc, safety) {
     // إظهار الـ Popup
