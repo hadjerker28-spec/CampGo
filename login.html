@@ -13,22 +13,16 @@
         <p>Login to your CampGo account</p>
         
         <input type="email" id="email" required placeholder="Email Address">
-        
         <input type="password" id="pass" placeholder="Password">
 
-        <input type="checkbox" id="remember" name="remember">
+        <div style="margin: 10px 0;">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember" style="color: white;">Remember me</label>
+        </div>
         
-        <button type="button" onclick="login()">Login</button>
+        <button type="button" onclick="login()" class="btn">Login</button>
         
         <p id="msg" style="margin-top: 10px; font-weight: bold;"></p>
-
-        <span>Don't have an account?</span>
-        <a href="signup.html" class="link">Sign up</a>
-    </div>
-
-        <button onclick="login()">Login</button>
-
-        <p id="msg"></p>
 
         <span>Don't have an account?</span>
         <a href="signup.html" class="link">Sign Up</a>
