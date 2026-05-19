@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Trip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="trip-page">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>CampGo</h2>
+     <ul>
+    <li onclick="window.location.href='index.html'">Home</li>
+    <li onclick="window.location.href='trip.html'">Create Trip</li>
+     <li onclick="window.location.href='mytrips.html'">My Trips</li>
+    <li onclick="window.location.href='shop.html'">Shop</li>
+    <li onclick="window.location.href='profil.html'">Profil</li>
+</ul>
+</div>
+<!-- CONTAINER -->
+<div class="trip-container">
+
+<div class="trip-box">
+
+<h1>Create Your Trip</h1>
+
+<!-- 🔥 اسم الرحلة -->
+<input type="text" id="name" placeholder="Trip Name">
+
+<!-- 🔥 المكان -->
+<input type="text" id="place" placeholder="Destination">
+
+<!-- 🔥 الولاية -->
+<select id="wilaya" required>
+    <option value="">Wilaya</option>
+</select>
+
+<!-- 🔥 النوع -->
+<select id="type" onchange="generateChecklist(this.value)">
+    <option value="">Select Type</option>
+    <option>Mountain</option>
+    <option>Sea</option>
+    <option>River</option>
+</select>
+
+<!-- 🎒 CHECKLIST -->
+<div id="checklist"></div>
+
+<!-- 🔘 BUTTON -->
+<button onclick="saveTrip()">Create Trip</button>
+
+<!-- 🔥 SUGGESTION -->
+<div id="suggestion" class="suggestion-card"></div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+

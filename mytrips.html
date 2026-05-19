@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Trips - CampGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="mytrips-pagee">
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+    <h2>CampGo</h2>
+     <ul>
+    <li onclick="window.location.href='index.html'">Home</li>
+    <li onclick="window.location.href='trip.html'">Create Trip</li>
+     <li onclick="window.location.href='mytrips.html'">My Trips</li>
+    <li onclick="window.location.href='shop.html'">Shop</li>
+    <li onclick="window.location.href='profil.html'">Profil</li>
+</ul>
+</div>
+
+<h1 class="mytrips-title">My Trips </h1>
+
+<!-- STATS -->
+<h2 id="totalTrips">0</h2>
+
+<h2 id="upcomingTrips">0</h2>
+
+<h2 id="pastTrips">0</h2>
+
+<div id="trip-gallery"></div>
+
+<!-- PAST -->
+<h2 class="section-title">My Trips ⏳</h2>
+<div id="past" class="trips-container"></div>
+
+<!-- EMPTY -->
+<div id="empty" class="empty-box">
+    <h2>No Trips Yet 😢</h2>
+    <p>Start your first adventure now!</p>
+    <button onclick="window.location.href='trip.html'">Create Trip</button>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+loadTrips();
+</script>
+</body>
+</html>

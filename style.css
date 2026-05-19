@@ -1,0 +1,1031 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #ff8c42;
+    color: white;
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url("image/backg1.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:70px;
+    color:#ff914d;
+    margin-bottom:15px;
+    animation:fadeUp 1s ease;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.hero .btn{
+    padding:14px 35px;
+    background:#ff914d;
+    border:none;
+    border-radius:12px;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.hero .btn:hover{
+    background:#ff6f00;
+    transform:scale(1.05);
+}
+
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:70px;
+    background:#f8f8f8;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    transition:0.4s;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2{
+    padding:15px;
+    color:#ff914d;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+
+/* 🔥 BACKGROUND */
+.shop {
+    background: url("") repeat center/cover;
+    min-height: 100vh;
+}
+
+/* 🔥 TITLE */
+.title {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+/* 🔥 CONTAINER */
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* 🔥 PRODUCT CARD */
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+/* ✨ hover effect */
+.product:hover {
+    transform: translateY(-10px);
+}
+
+/* 💰 PRICE */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ff8c42;
+}
+
+/* 🔘 BUTTON */
+.product button {
+    background: #ff8c42;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #e6762f;
+}
+.mountain-page{
+    background: url("images/bgmountain.jpg") no-repeat center center/cover;
+    min-height:100vh;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.place-card{
+    background:white;
+    width:220px;
+    border-radius:15px;
+    text-align:center;
+    padding:15px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.place-card:hover{
+    transform:scale(1.05);
+}
+
+.place-card img{
+    width:100%;
+    height:150px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.info-box{
+    background:rgb(0, 0, 0);
+    width:400px;
+    margin:30px auto;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.sea-page{
+    background: rgba(89, 135, 181, 0.35);
+    min-height:100vh;
+}
+.mountain-page{
+    background: rgba(92, 53, 8, 0.35);
+    min-height:100vh;
+}
+
+
+
+.River-page{
+    background: rgba(19, 84, 54, 0.35);
+    min-height:100vh;
+}
+
+.mytrips-pagee{
+
+background:url("image/welcomepg.jpg") no-repeat center center/cover;
+
+
+}
+
+
+
+
+
+
+
+
+.loading-page{
+    background:url("image/vert.jpg");
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.loader-box{
+    text-align:center;
+    animation: fadeIn 1s infinite alternate;
+}
+
+.shop-page{
+    background:url("image/shopbg.jpg") no-repeat center center/cover;
+    min-height:100vh;
+}
+
+.cart-box{
+    background:white;
+    width:250px;
+    margin:20px auto;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.place-card button{
+    background:#ff8c42;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.place-card button:hover{
+    background:#e6762f;
+}
+.shop-page{
+    background:url("image/vert.jpg")
+}
+
+
+
+
+
+
+
+
+
+
+.profile-page{
+    background: url("image/backg1.jpg") no-repeat center center/cover;
+    min-height:100vh;
+}
+
+.profile-box{
+    background: rgba(255,255,255,0.95);
+    width:350px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.profile-box:hover{
+    transform:translateY(-8px);
+}
+
+.profile-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #ff8c42;
+    margin-bottom:15px;
+}
+
+.profile-box h2{
+    margin:10px 0;
+    color:#333;
+}
+
+.profile-box p{
+    margin:8px 0;
+    color:#555;
+    font-size:17px;
+}
+
+.profile-box button{
+    margin-top:15px;
+    background:#ff8c42;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.profile-box button:hover{
+    background:#e6762f;
+}
+
+.trip-img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.trip-card button{
+    margin:5px;
+    padding:8px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#ff8c42;
+    color:white;
+}
+
+.trip-card button:hover{
+    background:#e6762f;
+}
+
+
+
+
+/* LOGIN + SIGNUP */
+
+.auth-page{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url("image/téléchargement\ \(21\).jpg");
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+}
+
+.auth-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.auth-box{
+    width:380px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    color:white;
+}
+
+.auth-box h1{
+    margin-bottom:10px;
+    font-size:32px;
+    color:#ff914d;
+}
+
+.auth-box p{
+    margin-bottom:20px;
+    color:#eee;
+}
+
+.auth-box input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+}
+
+.auth-box button,
+.auth-box .btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    background:#ff914d;
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:17px;
+    text-decoration:none;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.auth-box button:hover,
+.auth-box .btn:hover{
+    background:#ff6f00;
+    transform:scale(1.03);
+}
+
+.remember-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:10px;
+    color:white;
+    font-size:14px;
+}
+
+.link{
+    display:block;
+    margin-top:12px;
+    color:#ffcc99;
+    text-decoration:none;
+}
+
+.link:hover{
+    text-decoration:underline;
+}
+/* PAGE ANIMATION */
+.auth-box{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(0.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* INPUT ANIMATION */
+.auth-box input{
+    transition:0.3s;
+}
+
+.auth-box input:focus{
+    transform:scale(1.03);
+    box-shadow:0 0 10px rgba(255,145,77,0.6);
+}
+
+/* BUTTON ANIMATION */
+.auth-box button,
+.auth-box .btn{
+    transition:0.3s;
+}
+
+.auth-box button:hover,
+.auth-box .btn:hover{
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:0 8px 18px rgba(255,145,77,0.4);
+}
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,145,77,0.95);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#222;
+}
+.stats{
+    display:flex;
+    justify-content:space-around;
+    padding:60px;
+    background:#ff914d;
+    color:white;
+    text-align:center;
+}
+
+.stats h2{
+    font-size:45px;
+}
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= */
+/* HOME BUTTON CREATE TRIP   */
+/* ========================= */
+
+.hero .btn,
+.create-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 35px;
+    background:#ff914d;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 8px 18px rgba(0,0,0,0.25);
+}
+
+.hero .btn:hover,
+.create-btn:hover{
+    background:#ff6f00;
+    transform:translateY(-4px) scale(1.04);
+}
+
+/* ========================= */
+/* CREATE TRIP PAGE          */
+/* ========================= */
+
+.trip-page{
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url("image/téléchargement\ \(21\).jpg");
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+}
+
+.trip-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.trip-box{
+    width:430px;
+    background:rgba(239, 170, 109, 0.12);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+    color:white;
+    animation:fadeUp 1s ease;
+}
+
+.trip-box h1{
+    color:#ff914d;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.trip-box input,
+.trip-box select{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+}
+
+.trip-box button{
+    width:100%;
+    padding:14px;
+    background:#ff914d;
+    color:white;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.trip-box button:hover{
+    background:#ff6f00;
+    transform:scale(1.03);
+}
+
+/* Suggestion Card */
+.suggestion-card{
+    margin-top:20px;
+    background:white;
+    color:#222;
+    padding:18px;
+    border-radius:15px;
+    text-align:left;
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+.mytrips-page{
+    background:#f4f6f8;
+}
+
+/* TITLE */
+.mytrips-title{
+    text-align:center;
+    font-size:48px;
+    color:#ff914d;
+    margin:40px 0;
+}
+
+/* STATS */
+.trips-stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-bottom:40px;
+}
+
+.trips-stats div{
+    background:white;
+    padding:20px 30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* SECTION */
+.section-title{
+    margin-left:60px;
+    color:#333;
+}
+
+/* GRID */
+.trips-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:20px 60px;
+}
+
+/* CARD */
+.trip-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    transition:0.3s;
+}
+
+.trip-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.trip-card-content{
+    padding:18px;
+}
+
+.trip-card h2{
+    color:#ff914d;
+}
+
+/* ACTIONS */
+.trip-actions{
+    margin-top:10px;
+}
+
+.trip-actions button{
+    background:#ff4d4d;
+    border:none;
+    padding:10px;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* HOVER */
+.trip-card:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+/* EMPTY */
+.empty-box{
+    text-align:center;
+    margin-top:80px;
+    display:none;
+}
+
+.empty-box button{
+    background:#ff914d;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
+
+/* ANIMATION */
+.fade-in{
+    animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+
+
+
+.rating span{
+    cursor:pointer;
+    font-size:20px;
+    transition:0.2s;
+}
+
+.rating span:hover{
+    transform:scale(1.3);
+}
+
+
+
+
+
+/* WELCOME PAGE */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.welcome-page {
+    /* Use the image I generated for you here */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                url('image/welcomepg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+}
+
+/* Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    font-size: 1.2rem;
+}
+
+.nav-left i, .nav-right i {
+    margin-right: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Hero Content */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.logo-text span {
+    color: #ff8c32; /* Match your CampGo Orange */
+}
+
+.welcome-text h2 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.welcome-text h2 span {
+    color: #ff8c32;
+}
+
+.welcome-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.cta-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, background 0.3s;
+    width: 240px;
+    text-align: left;
+}
+
+.btn i {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-label {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.sub-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.btn-login {
+    background-color: #ff8c32;
+}
+
+.btn-signup {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.bottom-footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.bottom-footer span {
+    color: #ff8c32;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ========================= */
+/* 🔥 PREMIUM GLASS BUTTON   */
+/* ========================= */
+
+.trip-btn{
+    position:relative;
+    display:inline-block;
+    padding:16px 45px;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+
+    border-radius:50px;
+    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+
+    overflow:hidden;
+    transition:0.4s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* ✨ light effect */
+.trip-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+    transition:0.5s;
+}
+
+/* hover */
+.trip-btn:hover{
+    transform:translateY(-6px) scale(1.05);
+    background:rgba(255,145,77,0.3);
+    border-color:#ff914d;
+}
+
+/* shine effect */
+.trip-btn:hover::before{
+    left:100%;
+}
+
+
+
+.hero p{
+    font-family: 'Poppins', sans-serif;
+    font-size:26px;
+    font-weight:500;
+    letter-spacing:1px;
+    color:#fff;
+}
+/* 📂 تنسيق الحاوية الرئيسية لجعل البطاقات بجانب بعضها بشكل مرن */
+#trip-gallery, .trips-container {
+    display: flex;
+    flex-wrap: wrap;       /* للسماح للبطاقات بالنزول لسطر جديد إذا امتص السطر */
+    gap: 20px;            /* مسافة بيئية مريحة بين كل بطاقة وأخرى */
+    padding: 20px;
+    justify-content: center; /* تمركز البطاقات في وسط الشاشة */
+}
+
+/* 🎒 تنسيق بطاقة الرحلة الواحدة لتبدو صغيرة ومحددة الحجم */
+.trip-card {
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 300px;         /* تحديد عرض ثابت ومناسب للبطاقة لتصبح صغيرة */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* حركة تفاعلية جميلة عند تمرير الماوس فوق البطاقة */
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 🖼️ التحكم التام في حجم الصورة لمنع تمددها الضخم */
+.trip-img {
+    width: 100%;
+    height: 180px;        /* تحديد ارتفاع ثابت ومناسب للصورة داخل البطاقة */
+    object-fit: cover;    /* لقص الصورة بذكاء دون أن تتشوه تفاصيلها */
+}
+
+/* 📝 تنسيق النصوص والبيانات داخل البطاقة */
+.trip-card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.trip-card-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #e67e22;       /* لون برتقالي مميز يناسب طابع التخييم CampGo */
+}
+
+.trip-card-content p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}

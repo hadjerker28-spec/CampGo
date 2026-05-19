@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CampGo Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="shop-page">
+
+<div class="navbar">
+    <h2>CampGo</h2>
+     <ul>
+    <li onclick="window.location.href='index.html'">Home</li>
+    <li onclick="window.location.href='trip.html'">Create Trip</li>
+     <li onclick="window.location.href='mytrips.html'">My Trips</li>
+    <li onclick="window.location.href='shop.html'">Shop</li>
+    <li onclick="window.location.href='profil.html'">Profil</li>
+</ul>
+</div>
+
+<h1 class="title">Camping Shop 🛒</h1>
+
+<div class="cart-box">
+    <p>Items: <span id="count">0</span></p>
+    <p>Total: <span id="total">0</span> DA</p>
+</div>
+
+<div class="gallery">
+
+  <div class="place-card">
+    <img src="image/tent.jpg">
+
+    <h3>Tent</h3>
+    <p>12000 DA</p>
+
+    <!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+       
+    </div>
+
+
+    <button onclick="buy(12000)">Buy</button>
+</div>
+    <div class="place-card">
+        <img src="image/wallet.jpg">
+        <h3>Wallet </h3>
+        <p>3000 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+        <button onclick="buy(3000)">Buy</button>
+    </div>
+
+    <div class="place-card">
+        <img src="image/flashlight.jpg">
+        <h3>Flashlight </h3>
+        <p>1500 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+    
+    </div>
+        <button onclick="buy(1500)">Buy</button>
+    </div>
+
+
+
+    <div class="place-card">
+        <img src="image/camera.jpg">
+        <h3>Camera</h3>
+        <p>35000 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+       
+    </div>
+        <button onclick="buy(35000)">Buy</button>
+    </div>
+
+
+
+    <div class="place-card">
+        <img src="image/cord.jpg">
+        <h3>Cord</h3>
+        <p>700 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+       
+    </div>
+        <button onclick="buy(700)">Buy</button>
+    </div>
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/SleepingBag.jpg">
+        <h3>Sleeping Bag</h3>
+        <p>7300 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+        <button onclick="buy(7300)">Buy</button>
+    </div>
+
+
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/nwader.jpg">
+        <h3>Nwader</h3>
+        <p>1200 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+        <button onclick="buy(1200)">Buy</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/hizam.jpg">
+        <h3>Hezam</h3>
+        <p>2500 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+       
+    </div>
+        <button onclick="buy(2500)">Buy</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/bawsala.jpg">
+        <h3>bawsala</h3>
+        <p>1000 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+        <button onclick="buy(1000)">Buy</button>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/bot.jpg">
+        <h3>boot</h3>
+        <p>3000 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+        <button onclick="buy(3000)">Buy</button>
+    </div>
+
+
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/cagole.jpg">
+        <h3>Cagoole</h3>
+        <p>2500 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        <span onclick="rate(5)">⭐</span>
+    </div>
+        <button onclick="buy(2500)">Buy</button>
+    </div>
+
+
+
+
+
+
+
+    <div class="place-card">
+        <img src="image/gents.jpg">
+        <h3>les gants</h3>
+        <p>900 DA</p><!-- ⭐ RATING هنا -->
+    <div class="rating">
+        <span onclick="rate(1)">⭐</span>
+        <span onclick="rate(2)">⭐</span>
+        <span onclick="rate(3)">⭐</span>
+        <span onclick="rate(4)">⭐</span>
+        
+    </div>
+        <button onclick="buy(900)">Buy</button>
+    </div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

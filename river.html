@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CampGo Modern</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#6f4d0f,#3f2301);
+    color:white;
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    padding:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+}
+
+.sidebar button{
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#ff914d;
+    color:white;
+    cursor:pointer;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD GLASS */
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+/* IMAGE */
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+/* CONTENT */
+.card-content{
+    padding:15px;
+}
+
+.card h3{
+    margin:0;
+}
+
+/* TAG */
+.tag{
+    background:#ff914d;
+    padding:5px 10px;
+    border-radius:8px;
+    display:inline-block;
+    margin-top:10px;
+}
+
+/* BUTTON */
+.btn{
+    margin-top:10px;
+    background:#ff914d;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+    width:100%;
+}
+
+/* POPUP */
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-box{
+    background:white;
+    color:black;
+    width:80%;
+    max-width:600px;
+    padding:20px;
+    border-radius:20px;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    font-size:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+<!-- MAIN -->
+<div class="main">
+    <h1>Explore Rivers</h1>
+
+ 
+
+
+
+    <div class="grid" id="grid">
+
+        <div class="card" data-type="river">
+            <img src="image/wedRumel.jpg">
+            <div class="card-content">
+                <h3>Wed Rumel</h3>
+                <p>Clean river in Costantine</p>
+                <span class="tag">river</span>
+                <button class="btn" onclick="openPopup('Wed Rumel','Costantine','Beautiful and Clean river','90%')">Details</button>
+            </div>
+        </div>
+
+ <div class="card" data-type="river">
+            <img src="image/wedIsser.jpg">
+            <div class="card-content">
+                <h3>Wed Isser </h3>
+                <p>Clean river in El Medea</p>
+                <span class="tag">river</span>
+                <button class="btn" onclick="openPopup('wed isser','el media','Beautiful and Clean river','60%')">Details</button>
+            </div>
+        </div>
+
+
+         <div class="card" data-type="river">
+            <img src="image/wedChelif.jpg">
+            <div class="card-content">
+                <h3>Wed Chelif</h3>
+                <p>Clean river in Chelef</p>
+                <span class="tag">river</span>
+                <button class="btn" onclick="openPopup('wed Chelif','Chelef','Beautiful and Clean river','72%')">Details</button>
+            </div>
+        </div>
+
+         <div class="card" data-type="river">
+            <img src="image/skikda.jpg">
+            <div class="card-content">
+                <h3>Skikdas River</h3>
+                <p>Clean river in Skikda</p>
+                <span class="tag">river</span>
+                <button class="btn" onclick="openPopup('River','Skikda','Beautiful and Clean river','77%')">Details</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <span class="close" onclick="closePopup()">✖</span>
+        <div id="content"></div>
+    </div>
+</div>
+
+<script>
+
+/* FILTER */
+function filter(type){
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card=>{
+        if(type === "all" || card.dataset.type === type){
+            card.style.display="block";
+        }else{
+            card.style.display="none";
+        }
+    });
+}
+
+/* POPUP */
+function openPopup(name,wilaya,desc,safety){
+
+    document.getElementById("popup").style.display="flex";
+
+    document.getElementById("content").innerHTML=`
+        <h2>${name}</h2>
+        <p>📍 ${wilaya}</p>
+        <p>${desc}</p>
+        <p>⭐ Safety: ${safety}</p>
+
+        <button onclick="addToTrip('${name}')" class="btn">
+            ➕ Add to Trip
+        </button>
+    `;
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
+
+/* ADD TO TRIP */
+function addToTrip(place){
+    localStorage.setItem("selectedPlace", place);
+    alert("Added to Trip ✅");
+    window.location.href="trip.html";
+}
+
+</script>
+
+</body>
+</html>
