@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - CampGo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="auth-page">
 
 <div class="auth-container">
@@ -13,16 +14,16 @@
         <p>Login to your CampGo account</p>
         
         <input type="email" id="email" required placeholder="Email Address">
-        <input type="password" id="pass" placeholder="Password">
+        <input type="password" id="pass" required placeholder="Password">
 
-        <div style="margin: 10px 0;">
+        <div style="margin: 10px 0; display: flex; align-items: center; gap: 5px;">
             <input type="checkbox" id="remember" name="remember">
-            <label for="remember" style="color: white;">Remember me</label>
+            <label for="remember" style="color: white; font-size: 14px;">Remember me</label>
         </div>
         
         <button type="button" onclick="login()" class="btn">Login</button>
         
-        <p id="msg" style="margin-top: 10px; font-weight: bold;"></p>
+        <p id="msg" style="margin-top: 10px; font-weight: bold; color: #ff4d4d;"></p>
 
         <span>Don't have an account?</span>
         <a href="signup.html" class="link">Sign Up</a>
